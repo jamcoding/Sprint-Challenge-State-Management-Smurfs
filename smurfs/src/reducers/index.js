@@ -1,4 +1,4 @@
-import { FETCH_DATA, DATA_ERROR, DATA_SUCCESS } from '../actions/index';
+import { FETCH_DATA, DATA_ERROR, DATA_SUCCESS, POST_SMURF_DATA } from '../actions/index';
 
 const initialState = {
     smurf: [],
@@ -16,6 +16,13 @@ export const rootReducer = (state = initialState, action) => {
                 isLoading: true
             }
         case DATA_SUCCESS:
+            return {
+                ...state,
+                smurf: action.payload,
+                isLoading: false,
+                error: '',
+            }
+        case POST_SMURF_DATA:
             return {
                 ...state,
                 smurf: action.payload,

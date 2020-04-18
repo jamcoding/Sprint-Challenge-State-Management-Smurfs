@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import SmurfsList from './SmurfsList';
+import SmurfForm from './SmurfForm';
 
 export default function App () {
   return (
@@ -9,6 +10,7 @@ export default function App () {
       {/* <div>Welcome to your state management version of Smurfs!</div>
       <div>Start inside of your `src/index.js` file!</div>
       <div>Have fun!</div> */}
+      <SmurfForm />
       <SmurfsList />
     </div>
   );

@@ -9,10 +9,10 @@ const SmurfList = props => {
                 <div className="center">data loading</div>
             ) : (
                 <div>
-                    <button onClick={() => props.smurfData()}>get smurfs!</button>
+                    <button onClick={() => props.smurfData()}>CURRENT SMURFS</button>
                     {props.smurf.map(smurfs => {
                         return(
-                            <div key={smurfs.id}>
+                            <div key={smurfs.id} className="smurf-card">
                                 <p>{smurfs.name}</p>
                                 <p>{smurfs.age}</p>
                                 <p>{smurfs.height}</p>
